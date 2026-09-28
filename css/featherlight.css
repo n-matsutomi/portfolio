@@ -1,0 +1,104 @@
+/**
+ * Featherlight – スマホ表示対応修正版
+**/
+
+html.with-featherlight {
+	overflow: hidden;
+}
+
+/* ポップアップ全体の背景（黒透過） */
+.featherlight {
+	display: none;
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	z-index: 999999 !important;
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0.85);
+}
+
+.featherlight:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+/* モーダルの中身（画像が入る枠） */
+.featherlight .featherlight-content {
+	position: relative;
+	text-align: left;
+	vertical-align: middle;
+	display: inline-block;
+	overflow: auto;
+	padding: 20px;
+	box-sizing: border-box;
+	background: transparent;
+	cursor: auto;
+	white-space: normal;
+}
+
+.featherlight .featherlight-inner {
+	display: block;
+}
+
+.featherlight script.featherlight-inner,
+.featherlight link.featherlight-inner,
+.featherlight style.featherlight-inner {
+	display: none;
+}
+
+/* 閉じるボタン（×） */
+.featherlight .featherlight-close-icon {
+	position: absolute;
+	z-index: 9999;
+	top: -5px;
+	right: 5px;
+	font-size: 28px;
+	line-height: 1;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	padding: 0;
+}
+
+.featherlight * {
+	box-sizing: border-box;
+}
+
+
+/*------------------------------------sp-only-------------------------------------*/
+@media screen and (max-width:580px) {
+/* 閉じるボタン（×） */
+.featherlight .featherlight-close-icon {
+	position: absolute;
+	z-index: 9999;
+	top: 0px;
+	right: 5px;
+	font-size: 20px;
+	line-height: 1;
+	width:30px;
+	height: 30px;
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
