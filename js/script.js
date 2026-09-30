@@ -43,32 +43,26 @@ $(".btn-trigger").on("touchstart",function(){
 --------------------------*/
 
 var element = $('ul li.top-item');
-//element.css({'opacity': '0'});
 
 $(window).on('load', function() {
-		var timer;
-		var counter = 0;
-		timer = setInterval(function(){
-			$(element[counter]).animate({'opacity': '1'}, 500);
-			counter++;
-			if(counter >= element.length){
-				clearInterval(timer);
-			}
-		}, 170)
-})
 
-// JavaScript Document
-$(function(){
-　$(window).scroll(function (){
-    $('.effect-fade').each(function(){
-        var elemPos = $(this).offset().top;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll > elemPos - windowHeight){
-            $(this).addClass('effect-scroll');
+    var timer;
+    var counter = 0;
+
+    timer = setInterval(function(){
+
+        $(element[counter]).animate({
+            'opacity': '1'
+        }, 500);
+
+        counter++;
+
+        if(counter >= element.length){
+            clearInterval(timer);
         }
-    });
-　});
+
+    }, 170);
+
 });
 
 //-----------page-top-btn-------------------//
